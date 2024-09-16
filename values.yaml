@@ -1,0 +1,21 @@
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: "1.16.0"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
+
+resources: {}
